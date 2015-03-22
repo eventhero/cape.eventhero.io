@@ -7,10 +7,18 @@ var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var gutil = require('gulp-util');
+
+var pkg = require('./package.json');
+var version = pkg.version;
+var config = {
+    dest: './builds/' + version,
+    destMin: './builds/' + version + '/min'
+};
 
 gulp.task('clean', function(callback) {
-    del(['./public/**/*'], function(err, deletedFiles) {
-        console.log('Files deleted:', deletedFiles.join(', '));
+    del([config.dest + '/**/*'], function(err, deletedFiles) {
+        gutil.log('Files deleted:\n', deletedFiles.join('\n'));
         callback();
     });
 });
@@ -23,10 +31,10 @@ gulp.task('js', function() {
     ])
         .pipe(sourcemaps.init())
         .pipe(concat('application.js'))
-        .pipe(gulp.dest('./public'))
+        .pipe(gulp.dest(config.dest))
         .pipe(uglify())
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./public/min'));
+        .pipe(gulp.dest(config.destMin));
 });
 
 gulp.task('css', function() {
@@ -39,15 +47,16 @@ gulp.task('css', function() {
             browsers: ['last 2 versions'],
             cascade: true
         }))
-        .pipe(gulp.dest('./public'))
+        .pipe(gulp.dest(config.dest))
         .pipe(minifyCSS())
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./public/min'));
+        .pipe(gulp.dest(config.destMin));
 });
 
 gulp.task('html', function() {
     return gulp.src('./src/index.html')
-        .pipe(gulp.dest('./public'));
+        .pipe(gulp.dest(config.dest))
+        .pipe(gulp.dest(config.destMin));
 });
 
 gulp.task('build', ['css', 'js', 'html']);
