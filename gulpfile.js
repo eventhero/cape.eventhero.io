@@ -55,5 +55,3 @@ gulp.task('watch', function() {
 
 });
 gulp.task('default', ['build']);
-
-// TODO: integrate https://github.com/darcyclarke/DSS to generate styleguide
