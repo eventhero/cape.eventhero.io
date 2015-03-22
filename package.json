@@ -10,7 +10,9 @@
   "license": "ISC",
   "devDependencies": {
     "bootstrap": "^3.3.4",
+    "del": "^1.1.1",
     "gulp": "^3.8.11",
+    "gulp-less": "^3.0.2",
     "jquery": "^2.1.3"
   }
 }
