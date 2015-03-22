@@ -5,12 +5,28 @@ var del = require('del');
 var minifyCSS = require('gulp-minify-css');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
 
 gulp.task('clean', function(callback) {
-    del(['./public/**/*'], function (err, deletedFiles) {
+    del(['./public/**/*'], function(err, deletedFiles) {
         console.log('Files deleted:', deletedFiles.join(', '));
         callback();
     });
+});
+
+gulp.task('js', function() {
+    return gulp.src([
+        path.join(__dirname, 'node_modules', 'jquery', 'dist', 'jquery.js'),
+        path.join(__dirname, 'node_modules', 'bootstrap', 'dist', 'js', 'bootstrap.js'),
+        path.join(__dirname, 'src', 'application.js')
+    ])
+        .pipe(sourcemaps.init())
+        .pipe(concat('application.js'))
+        .pipe(gulp.dest('./public'))
+        .pipe(uglify())
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('./public/min'));
 });
 
 gulp.task('css', function() {
@@ -29,8 +45,8 @@ gulp.task('css', function() {
         .pipe(gulp.dest('./public/min'));
 });
 
-gulp.task('build', ['css']);
-gulp.task('watch', function(){
+gulp.task('build', ['css', 'js']);
+gulp.task('watch', function() {
 
 });
 gulp.task('default', ['build']);
