@@ -45,7 +45,12 @@ gulp.task('css', function() {
         .pipe(gulp.dest('./public/min'));
 });
 
-gulp.task('build', ['css', 'js']);
+gulp.task('html', function() {
+    return gulp.src('./src/index.html')
+        .pipe(gulp.dest('./public'));
+});
+
+gulp.task('build', ['css', 'js', 'html']);
 gulp.task('watch', function() {
 
 });
