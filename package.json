@@ -9,6 +9,7 @@
   "author": "Kliment Mamykin",
   "license": "ISC",
   "devDependencies": {
-    "bootstrap": "^3.3.4"
+    "bootstrap": "^3.3.4",
+    "jquery": "^2.1.3"
   }
 }
