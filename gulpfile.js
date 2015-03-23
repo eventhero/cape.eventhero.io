@@ -8,20 +8,12 @@ var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var gutil = require('gulp-util');
+var browserSync = require('browser-sync');
+var reload = browserSync.reload;
 
-var pkg = require('./package.json');
-var version = pkg.version;
 var config = {
-    dest: './builds/' + version,
-    destMin: './builds/' + version + '/min'
+    dest: './versions/latest'
 };
-
-gulp.task('clean', function(callback) {
-    del([config.dest + '/**/*'], function(err, deletedFiles) {
-        gutil.log('Files deleted:\n', deletedFiles.join('\n'));
-        callback();
-    });
-});
 
 gulp.task('js', function() {
     return gulp.src([
@@ -31,10 +23,9 @@ gulp.task('js', function() {
     ])
         .pipe(sourcemaps.init())
         .pipe(concat('application.js'))
-        .pipe(gulp.dest(config.dest))
         .pipe(uglify())
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(config.destMin));
+        .pipe(gulp.dest(config.dest));
 });
 
 gulp.task('css', function() {
@@ -47,20 +38,47 @@ gulp.task('css', function() {
             browsers: ['last 2 versions'],
             cascade: true
         }))
-        .pipe(gulp.dest(config.dest))
         .pipe(minifyCSS())
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(config.destMin));
+        .pipe(gulp.dest(config.dest));
 });
 
 gulp.task('html', function() {
     return gulp.src('./src/index.html')
-        .pipe(gulp.dest(config.dest))
-        .pipe(gulp.dest(config.destMin));
+        .pipe(gulp.dest(config.dest));
 });
 
-gulp.task('build', ['css', 'js', 'html']);
-gulp.task('watch', function() {
+gulp.task('serve', ['css', 'js', 'html'], function() {
+    // watch for sources and recompile
+    gulp.watch('./src/*.js', ['js']);
+    gulp.watch('./src/*.less', ['css']);
+    gulp.watch('./src/*.html', ['html']);
 
+    // start development web server
+    browserSync({
+        server: {
+            baseDir: config.dest + '/'
+        },
+        files: config.dest + '/**.+(html|js|css|png|jpeg)',
+        online: false, // no online features needed, but improve startup time
+        logFileChanges: true
+    });
+    // watch for compiled files and reload browser
+    gulp.watch(config.dist + '/*.*').on('change', reload);
 });
-gulp.task('default', ['build']);
+
+gulp.task('clean', function(callback) {
+    del([config.dest + '/**/*'], function(err, deletedFiles) {
+        gutil.log('Files deleted:\n', deletedFiles.join('\n'));
+        callback();
+    });
+});
+
+gulp.task('build', ['clean', 'css', 'js', 'html'], function(callback){
+    var pkg = require('./package.json');
+    var version = pkg.version;
+    // copy versions/latest to versions/{version} or fail if target dir already exists
+    callback()
+});
+
+gulp.task('default', ['serve']);

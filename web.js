@@ -4,9 +4,9 @@ var compression = require('compression');
 
 // compress all requests
 app.use(compression());
-app.use('/versions', express.static('builds'));
+app.use('/versions', express.static('versions'));
 
-// TODO: eventuall loop through all version and display an index with links
+// TODO: eventually loop through all version and display an index with links
 //app.get('/', function(req, res) {
 //    res.send('Hello World!')
 //});
