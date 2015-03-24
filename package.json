@@ -2,6 +2,10 @@
   "name": "cape.eventhero.io",
   "description": "Custom Twitter Bootstrap built for EventHero.io",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eventhero/cape.eventhero.io.git"
+  },
   "main": "web.js",
   "engines": {
     "node": "0.10.x",
