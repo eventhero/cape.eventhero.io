@@ -32,7 +32,10 @@ gulp.task('css', function() {
     return gulp.src('./src/application.less')
         .pipe(sourcemaps.init())
         .pipe(less({
-            paths: [path.join(__dirname, 'node_modules', 'bootstrap', 'less')]
+            paths: [
+                path.join(__dirname, 'node_modules', 'bootstrap', 'less'),
+                path.join(__dirname, 'node_modules', 'font-awesome', 'less')
+            ]
         }))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
@@ -44,7 +47,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('fonts', function() {
-    return gulp.src('node_modules/bootstrap/dist/fonts/*')
+    return gulp.src(['node_modules/bootstrap/dist/fonts/*', 'node_modules/font-awesome/fonts/*'])
         .pipe(gulp.dest(config.dest + '/fonts'))
 });
 

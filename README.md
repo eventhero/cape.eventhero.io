@@ -6,7 +6,7 @@
 - [X] watch: run gulp
 - [X] Set long expiration caching in express app
 - [X] heroku deployment
-- [ ] fonts
+- [X] fonts
 - [ ] integrate https://github.com/darcyclarke/DSS to generate styleguide
 - [ ] cloudfront caching ?
 
