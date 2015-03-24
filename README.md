@@ -4,11 +4,11 @@
 - [X] Versioned structure
 - [X] variables.less
 - [X] watch: run gulp
-- [ ] heroku deployment
 - [ ] fonts
+- [ ] Set long expiration caching in express app
+- [ ] heroku deployment
 - [ ] integrate https://github.com/darcyclarke/DSS to generate styleguide
 - [ ] cloudfront caching ?
-- [ ] Set long expiration caching in express app
 
 ## Installation (on Mac OSX)
 
@@ -21,5 +21,13 @@ nvm use 0.10
 ```
 - Install gulp globally `npm install gulp -g`
 - Install modules `npm install`
-- Develop by starting `gulp`
-    - This will open browser and "watch" for changes and recompile
+
+## Development
+
+- Develop by starting `gulp`. This will open browser and "watch" for changes and recompile/reload files live.
+
+## Release
+
+- Bump the version in package.json
+- `gulp build` and commit the built version of assets to git
+- `git push heroku master`
