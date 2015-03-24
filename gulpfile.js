@@ -74,11 +74,12 @@ gulp.task('clean', function(callback) {
     });
 });
 
-gulp.task('build', ['clean', 'css', 'js', 'html'], function(callback){
+gulp.task('build', ['clean', 'css', 'js', 'html'], function(callback) {
     var pkg = require('./package.json');
     var version = pkg.version;
     // copy versions/latest to versions/{version} or fail if target dir already exists
-    callback()
+    return gulp.src([config.dest + '/**/*'])
+        .pipe(gulp.dest('./versions/' + version));
 });
 
 gulp.task('default', ['serve']);
