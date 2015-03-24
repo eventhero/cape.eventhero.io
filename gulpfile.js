@@ -43,12 +43,17 @@ gulp.task('css', function() {
         .pipe(gulp.dest(config.dest));
 });
 
+gulp.task('fonts', function() {
+    return gulp.src('node_modules/bootstrap/dist/fonts/*')
+        .pipe(gulp.dest(config.dest + '/fonts'))
+});
+
 gulp.task('html', function() {
     return gulp.src('./src/index.html')
         .pipe(gulp.dest(config.dest));
 });
 
-gulp.task('serve', ['css', 'js', 'html'], function() {
+gulp.task('serve', ['fonts', 'css', 'js', 'html'], function() {
     // watch for sources and recompile
     gulp.watch('./src/*.js', ['js']);
     gulp.watch('./src/*.less', ['css']);
@@ -74,7 +79,7 @@ gulp.task('clean', function(callback) {
     });
 });
 
-gulp.task('build', ['clean', 'css', 'js', 'html'], function(callback) {
+gulp.task('build', ['fonts', 'css', 'js', 'html'], function() {
     var pkg = require('./package.json');
     var version = pkg.version;
     // copy versions/latest to versions/{version} or fail if target dir already exists

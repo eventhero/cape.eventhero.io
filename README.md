@@ -4,9 +4,9 @@
 - [X] Versioned structure
 - [X] variables.less
 - [X] watch: run gulp
+- [X] Set long expiration caching in express app
+- [X] heroku deployment
 - [ ] fonts
-- [ ] Set long expiration caching in express app
-- [ ] heroku deployment
 - [ ] integrate https://github.com/darcyclarke/DSS to generate styleguide
 - [ ] cloudfront caching ?
 
