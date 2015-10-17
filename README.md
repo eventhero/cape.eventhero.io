@@ -8,6 +8,8 @@
 - [X] heroku deployment
 - [X] fonts
 - [X] S3 deployment
+- [ ] Use codeship env vars in building version
+- [ ] Add npm deploy script to use local gulp, not globally installed
 - [ ] integrate https://www.npmjs.com/package/kss to generate styleguide
 - [ ] cloudfront caching ?
 

@@ -95,9 +95,10 @@ gulp.task('build', ['fonts', 'css', 'js', 'html']);
 
 gulp.task('deploy', ['build'], function () {
   var version = require('./package.json').version;
+  var buildNumber = (process.env.$CI_COMMIT_ID && process.env.$CI_COMMIT_ID.slice(0,7)) || '0';
   return gulp.src([config.dest + '/**/*'])
     .pipe(s3(s3Credentials, {
-      uploadPath: '/assets/' + version + '/',
+      uploadPath: '/' + version + '.' + buildNumber + '/assets/',
       headers: { 'Cache-Control': 'max-age=315360000, no-transform, public' }
     }));
 });
