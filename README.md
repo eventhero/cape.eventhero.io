@@ -35,3 +35,8 @@ nvm use vX.X
 
 Deploys never overwrite previously deployed assets, each deployment pushes assets in ./dest to 
 /assets/<version>/ folder.
+
+## Continuous Integration/Deployment
+codeship
+IAM user - codeship-cape
+IAM group - cape-ops
