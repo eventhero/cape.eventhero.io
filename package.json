@@ -6,7 +6,10 @@
     "type": "git",
     "url": "https://github.com/eventhero/cape.eventhero.io.git"
   },
-  "scripts": {},
+  "scripts": {
+    "serve": "gulp serve",
+    "deploy": "gulp deploy"
+  },
   "author": "Kliment Mamykin",
   "license": "ISC",
   "dependencies": {
