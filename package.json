@@ -1,24 +1,16 @@
 {
   "name": "cape.eventhero.io",
-  "description": "Custom Twitter Bootstrap built for EventHero.io",
-  "version": "0.0.2",
+  "description": "Custom Visual Style guide for EventHero.io",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/eventhero/cape.eventhero.io.git"
   },
-  "main": "web.js",
-  "engines": {
-    "node": "0.10.x",
-    "npm": "2.7.x"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kliment Mamykin",
   "license": "ISC",
   "dependencies": {
-    "compression": "^1.4.3",
-    "express": "^4.12.3"
   },
   "devDependencies": {
     "bootstrap": "^3.3.4",
