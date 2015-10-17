@@ -1,4 +1,5 @@
 # EventHero visual style guide
+[ ![Codeship Status for eventhero/cape.eventhero.io](https://codeship.com/projects/1f17c670-5708-0133-bb80-5ebc52a48109/status?branch=master)](https://codeship.com/projects/109453)
 
 ## TODOs
 - [X] Versioned structure
