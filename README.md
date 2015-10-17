@@ -7,27 +7,31 @@
 - [X] Set long expiration caching in express app
 - [X] heroku deployment
 - [X] fonts
-- [ ] integrate https://github.com/darcyclarke/DSS to generate styleguide
+- [X] S3 deployment
+- [ ] integrate https://www.npmjs.com/package/kss to generate styleguide
 - [ ] cloudfront caching ?
 
-## Installation (on Mac OSX)
+## Install for development (on Mac OSX)
 
 - Install brew http://brew.sh
-- Install nvm using brew, and install node 0.10
+- Install nvm using brew, and install node (latest)
 ```
 brew install nvm
-nvm install 0.10
-nvm use 0.10
+nvm ls
+nvm install vX.X
+nvm use vX.X
 ```
 - Install gulp globally `npm install gulp -g`
 - Install modules `npm install`
 
-## Development
+## Develop
 
 - Develop by starting `gulp`. This will open browser and "watch" for changes and recompile/reload files live.
 
-## Release
+## Deploy
 
-- Bump the version in package.json
-- `gulp build` and commit the built version of assets to git
-- `git push heroku master`
+- Bump the version in package.json and commit
+- `gulp deploy` to push compiled to live site
+
+Deploys never overwrite previously deployed assets, each deployment pushes assets in ./dest to 
+/assets/<version>/ folder.
