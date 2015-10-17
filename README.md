@@ -8,8 +8,8 @@
 - [X] heroku deployment
 - [X] fonts
 - [X] S3 deployment
-- [ ] Use codeship env vars in building version
-- [ ] Add npm deploy script to use local gulp, not globally installed
+- [X] Use codeship env vars in building version
+- [X] Add npm deploy script to use local gulp, not globally installed
 - [ ] integrate https://www.npmjs.com/package/kss to generate styleguide
 - [ ] cloudfront caching ?
 
@@ -23,20 +23,19 @@ nvm ls
 nvm install vX.X
 nvm use vX.X
 ```
-- Install gulp globally `npm install gulp -g`
 - Install modules `npm install`
 
 ## Develop
 
-- Develop by starting `gulp`. This will open browser and "watch" for changes and recompile/reload files live.
+- Develop by starting `npm run serve`. This will open browser and "watch" for changes and recompile/reload files live.
 
 ## Deploy
 
 - Bump the version in package.json and commit
-- `gulp deploy` to push compiled to live site
+- Push to origin. Codeship automatically builds and deploys all commits to master
 
 Deploys never overwrite previously deployed assets, each deployment pushes assets in ./dest to 
-/assets/<version>/ folder.
+http://cape.eventhero.io/<version>/ folder.
 
 ## Continuous Integration/Deployment
 codeship
