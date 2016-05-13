@@ -19,6 +19,7 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
     <![endif]-->
 </head>
 
@@ -102,360 +103,286 @@
 </div>
 <div class='row'>
 <div class='span12'>
-
-<div class='row'>
-<div class='span4'>
-<form accept-charset="UTF-8" action="/manage/54f794569cedba0009000011/attendees" class="form-search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
-<input class="input-medium search-query" id="q" name="q" type="text" />
-<button class="btn" type="submit"><i class='icon-search'></i>
-Search
-</button></form>
-
-</div>
-<div class='span6'>
-<ul class='horizontal-list'>
-<li>
-<span>Registered:</span>
-<span class='badge'>20</span>
-</li>
-<li>
-<span>Checked-in:</span>
-<span class='badge'>5</span>
-</li>
-<li>
-<span>Awaiting arrival:</span>
-<span class='badge'>15</span>
-</li>
-</ul>
-</div>
-<div class='span2'>
-<div class='btn-group'>
-<a href="/manage/54f794569cedba0009000011/attendees/new" class="btn btn-primary"><i class='icon-plus'></i>
-Add Attendee
-</a></div>
-</div>
-</div>
-<div class='row'>
-<div class='span12'>
-<table class='attendees table table-condensed table-hover'>
+<table class='exhibitors table table-striped table-condensed'>
 <thead>
 <tr>
+<th>Organization</th>
+<th>Team Invite Code</th>
+<th>Event team size</th>
+<th>Payment Status</th>
+<th>Ready</th>
+<th># of leads</th>
 <th></th>
-<th>Name</th>
-<th>Email</th>
-<th>Company</th>
-<th>Title</th>
-<th>Check-in</th>
 </tr>
 </thead>
 <tbody>
-<tr data-edit-url='/manage/54f794569cedba0009000011/attendees/55918d34fff2b505ca00001a/edit' id='attendee_55918d34fff2b505ca00001a'>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d34fff2b505ca00001a/edit"><i class='icon icon-edit'></i>
-</a></td>
-<td class='js-click'>John Blaze</td>
-<td class='js-click'>casperjocky@eventhero.io</td>
-<td class='js-click'>Quentin Carnival</td>
-<td class='js-click'>Motorcycle Stunt Man</td>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d34fff2b505ca00001a/checkin" class="btn btn-small" data-disable-with="Checking..." data-method="put" data-remote="true" rel="nofollow"><i class='icon icon-check'></i>
-<span>Check-in</span>
-</a></td>
+<tr>
+<td>Base</td>
+<td>52C9F</td>
+<td>1</td>
+<td>VIP</td>
+<td>Yes</td>
+<th>2</th>
+<th>
+<div class='btn-group pull-right'>
+<a class='btn btn-mini dropdown-toggle' data-toggle='dropdown' href='#'>
+<span class='glyphicon glyphicon-cog'></span>
+<span class='caret'></span>
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a href="/manage/54f794569cedba0009000011/exhibitors/552d95b15109030006000001/edit">Add invites</a>
+</li>
+<li>
+<a href="/manage/54f794569cedba0009000011/exhibitors/552d95b15109030006000001" data-method="delete" rel="nofollow">Remove</a>
+</li>
+</ul>
+</div>
+</th>
 </tr>
-
-<tr data-edit-url='/manage/54f794569cedba0009000011/attendees/55918d33fff2b505ca000012/edit' id='attendee_55918d33fff2b505ca000012'>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d33fff2b505ca000012/edit"><i class='icon icon-edit'></i>
-</a></td>
-<td class='js-click'>Eric Brooks</td>
-<td class='js-click'>theblade@eventhero.io</td>
-<td class='js-click'>Silvereye</td>
-<td class='js-click'>Waste Management</td>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d33fff2b505ca000012/checkin" class="btn btn-small" data-disable-with="Checking..." data-method="put" data-remote="true" rel="nofollow"><i class='icon icon-check'></i>
-<span>Check-in</span>
-</a></td>
+<tr>
+<td>EventHero</td>
+<td>6AMWE</td>
+<td>1</td>
+<td>Not paid</td>
+<td>No</td>
+<th>0</th>
+<th>
+<div class='btn-group pull-right'>
+<a class='btn btn-mini dropdown-toggle' data-toggle='dropdown' href='#'>
+<span class='glyphicon glyphicon-cog'></span>
+<span class='caret'></span>
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a href="/manage/54f794569cedba0009000011/exhibitors/554b94b9651302000600001b/edit">Add invites</a>
+</li>
+<li>
+<a href="/manage/54f794569cedba0009000011/exhibitors/554b94b9651302000600001b" data-method="delete" rel="nofollow">Remove</a>
+</li>
+</ul>
+</div>
+</th>
 </tr>
-
-<tr data-edit-url='/manage/54f794569cedba0009000011/attendees/559190b00a51ea0006000011/edit' id='attendee_559190b00a51ea0006000011'>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/559190b00a51ea0006000011/edit"><i class='icon icon-edit'></i>
-</a></td>
-<td class='js-click'>Frank Castle</td>
-<td class='js-click'>ugonnagetpunished@eventhero.io</td>
-<td class='js-click'>U.S. Marines</td>
-<td class='js-click'>Instructor</td>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/559190b00a51ea0006000011/checkin" class="btn btn-small" data-disable-with="Checking..." data-method="put" data-remote="true" rel="nofollow"><i class='icon icon-check'></i>
-<span>Check-in</span>
-</a></td>
+<tr>
+<td>Evigo</td>
+<td>67TR9</td>
+<td>0</td>
+<td>VIP</td>
+<td>Yes</td>
+<th>0</th>
+<th>
+<div class='btn-group pull-right'>
+<a class='btn btn-mini dropdown-toggle' data-toggle='dropdown' href='#'>
+<span class='glyphicon glyphicon-cog'></span>
+<span class='caret'></span>
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a href="/manage/54f794569cedba0009000011/exhibitors/555205f1819b64000c00000e/edit">Add invites</a>
+</li>
+<li>
+<a href="/manage/54f794569cedba0009000011/exhibitors/555205f1819b64000c00000e" data-method="delete" rel="nofollow">Remove</a>
+</li>
+</ul>
+</div>
+</th>
 </tr>
-
-<tr data-edit-url='/manage/54f794569cedba0009000011/attendees/55918d32fff2b505ca000006/edit' id='attendee_55918d32fff2b505ca000006'>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d32fff2b505ca000006/edit"><i class='icon icon-edit'></i>
-</a></td>
-<td class='js-click'>Jessica Drew</td>
-<td class='js-click'>spiderwoman@eventhero.io</td>
-<td class='js-click'>Avengers</td>
-<td class='js-click'>Researcher</td>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d32fff2b505ca000006/checkin" class="btn btn-small" data-disable-with="Checking..." data-method="put" data-remote="true" rel="nofollow"><i class='icon icon-check'></i>
-<span>Check-in</span>
-</a></td>
+<tr>
+<td>Marketing Over Coffee</td>
+<td>74CP8</td>
+<td>1</td>
+<td>Not paid</td>
+<td>No</td>
+<th>3</th>
+<th>
+<div class='btn-group pull-right'>
+<a class='btn btn-mini dropdown-toggle' data-toggle='dropdown' href='#'>
+<span class='glyphicon glyphicon-cog'></span>
+<span class='caret'></span>
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a href="/manage/54f794569cedba0009000011/exhibitors/55799a8bbfd811000c000008/edit">Add invites</a>
+</li>
+<li>
+<a href="/manage/54f794569cedba0009000011/exhibitors/55799a8bbfd811000c000008" data-method="delete" rel="nofollow">Remove</a>
+</li>
+</ul>
+</div>
+</th>
 </tr>
-
-<tr data-edit-url='/manage/54f794569cedba0009000011/attendees/556cb8f23b08cf0009000010/edit' id='attendee_556cb8f23b08cf0009000010'>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/556cb8f23b08cf0009000010/edit"><i class='icon icon-edit'></i>
-</a></td>
-<td class='js-click'>John Federico</td>
-<td class='js-click'>john@eventhero.io</td>
-<td class='js-click'>EventHero</td>
-<td class='js-click'>CEO &amp; Co-founder</td>
-<td class='js-click'>
-<i class='icon icon-check'></i>
-<span>Checked-in</span>
-</td>
+<tr>
+<td>NERA</td>
+<td>HNYLM</td>
+<td>2</td>
+<td>Not paid</td>
+<td>No</td>
+<th>4</th>
+<th>
+<div class='btn-group pull-right'>
+<a class='btn btn-mini dropdown-toggle' data-toggle='dropdown' href='#'>
+<span class='glyphicon glyphicon-cog'></span>
+<span class='caret'></span>
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a href="/manage/54f794569cedba0009000011/exhibitors/557999bcf090ee000c000003/edit">Add invites</a>
+</li>
+<li>
+<a href="/manage/54f794569cedba0009000011/exhibitors/557999bcf090ee000c000003" data-method="delete" rel="nofollow">Remove</a>
+</li>
+</ul>
+</div>
+</th>
 </tr>
-
-<tr data-edit-url='/manage/54f794569cedba0009000011/attendees/556cb9153b08cf0009000011/edit' id='attendee_556cb9153b08cf0009000011'>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/556cb9153b08cf0009000011/edit"><i class='icon icon-edit'></i>
-</a></td>
-<td class='js-click'>Todd Hamilton</td>
-<td class='js-click'>todd@eventhero.io</td>
-<td class='js-click'>EventHero</td>
-<td class='js-click'>Product Manager</td>
-<td class='js-click'>
-<i class='icon icon-check'></i>
-<span>Checked-in</span>
-</td>
+<tr>
+<td>Qriouser</td>
+<td>S23LM</td>
+<td>1</td>
+<td>Not paid</td>
+<td>No</td>
+<th>0</th>
+<th>
+<div class='btn-group pull-right'>
+<a class='btn btn-mini dropdown-toggle' data-toggle='dropdown' href='#'>
+<span class='glyphicon glyphicon-cog'></span>
+<span class='caret'></span>
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a href="/manage/54f794569cedba0009000011/exhibitors/54fef152311535000c000003/edit">Add invites</a>
+</li>
+<li>
+<a href="/manage/54f794569cedba0009000011/exhibitors/54fef152311535000c000003" data-method="delete" rel="nofollow">Remove</a>
+</li>
+</ul>
+</div>
+</th>
 </tr>
-
-<tr data-edit-url='/manage/54f794569cedba0009000011/attendees/55918d33fff2b505ca000014/edit' id='attendee_55918d33fff2b505ca000014'>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d33fff2b505ca000014/edit"><i class='icon icon-edit'></i>
-</a></td>
-<td class='js-click'>Alana Jobson</td>
-<td class='js-click'>imahero@eventhero.io</td>
-<td class='js-click'>Web Enterprises</td>
-<td class='js-click'>Crime Fighter</td>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d33fff2b505ca000014/checkin" class="btn btn-small" data-disable-with="Checking..." data-method="put" data-remote="true" rel="nofollow"><i class='icon icon-check'></i>
-<span>Check-in</span>
-</a></td>
-</tr>
-
-<tr data-edit-url='/manage/54f794569cedba0009000011/attendees/5574b6afde12e90006000006/edit' id='attendee_5574b6afde12e90006000006'>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/5574b6afde12e90006000006/edit"><i class='icon icon-edit'></i>
-</a></td>
-<td class='js-click'>Kliment Mamykin</td>
-<td class='js-click'>kmamyk@yahoo.com</td>
-<td class='js-click'>Qrious</td>
-<td class='js-click'>CTO</td>
-<td class='js-click'>
-<i class='icon icon-check'></i>
-<span>Checked-in</span>
-</td>
-</tr>
-
-<tr data-edit-url='/manage/54f794569cedba0009000011/attendees/55918d33fff2b505ca000010/edit' id='attendee_55918d33fff2b505ca000010'>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d33fff2b505ca000010/edit"><i class='icon icon-edit'></i>
-</a></td>
-<td class='js-click'>Matthew Murdock</td>
-<td class='js-click'>daredevil@eventhero.io</td>
-<td class='js-click'>Marvel Knights</td>
-<td class='js-click'>Lawyer</td>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d33fff2b505ca000010/checkin" class="btn btn-small" data-disable-with="Checking..." data-method="put" data-remote="true" rel="nofollow"><i class='icon icon-check'></i>
-<span>Check-in</span>
-</a></td>
-</tr>
-
-<tr data-edit-url='/manage/54f794569cedba0009000011/attendees/5527f126b424dd000c000076/edit' id='attendee_5527f126b424dd000c000076'>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/5527f126b424dd000c000076/edit"><i class='icon icon-edit'></i>
-</a></td>
-<td class='js-click'>Thor Odinson</td>
-<td class='js-click'>thor@asgard.org</td>
-<td class='js-click'>The Avengers</td>
-<td class='js-click'>Norse God</td>
-<td class='js-click'>
-<i class='icon icon-check'></i>
-<span>Checked-in</span>
-</td>
-</tr>
-
-<tr data-edit-url='/manage/54f794569cedba0009000011/attendees/55918d32fff2b505ca000004/edit' id='attendee_55918d32fff2b505ca000004'>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d32fff2b505ca000004/edit"><i class='icon icon-edit'></i>
-</a></td>
-<td class='js-click'>Piotr Rasputin</td>
-<td class='js-click'>colossus@eventhero.io</td>
-<td class='js-click'>X-Men</td>
-<td class='js-click'>Farmer</td>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d32fff2b505ca000004/checkin" class="btn btn-small" data-disable-with="Checking..." data-method="put" data-remote="true" rel="nofollow"><i class='icon icon-check'></i>
-<span>Check-in</span>
-</a></td>
-</tr>
-
-<tr data-edit-url='/manage/54f794569cedba0009000011/attendees/55918d32fff2b505ca000008/edit' id='attendee_55918d32fff2b505ca000008'>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d32fff2b505ca000008/edit"><i class='icon icon-edit'></i>
-</a></td>
-<td class='js-click'>Kyle Richmond</td>
-<td class='js-click'>nighthawk@eventhero.io</td>
-<td class='js-click'>Defenders</td>
-<td class='js-click'>Night Crew</td>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d32fff2b505ca000008/checkin" class="btn btn-small" data-disable-with="Checking..." data-method="put" data-remote="true" rel="nofollow"><i class='icon icon-check'></i>
-<span>Check-in</span>
-</a></td>
-</tr>
-
-<tr data-edit-url='/manage/54f794569cedba0009000011/attendees/55918d32fff2b505ca000002/edit' id='attendee_55918d32fff2b505ca000002'>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d32fff2b505ca000002/edit"><i class='icon icon-edit'></i>
-</a></td>
-<td class='js-click'>Natasha Romanova</td>
-<td class='js-click'>widownegro@eventhero.io</td>
-<td class='js-click'>Shield</td>
-<td class='js-click'>Ex- Ballerina</td>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d32fff2b505ca000002/checkin" class="btn btn-small" data-disable-with="Checking..." data-method="put" data-remote="true" rel="nofollow"><i class='icon icon-check'></i>
-<span>Check-in</span>
-</a></td>
-</tr>
-
-<tr data-edit-url='/manage/54f794569cedba0009000011/attendees/5527d218b424dd0009000044/edit' id='attendee_5527d218b424dd0009000044'>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/5527d218b424dd0009000044/edit"><i class='icon icon-edit'></i>
-</a></td>
-<td class='js-click'>Tony Stark</td>
-<td class='js-click'>tony@starkindustries.com</td>
-<td class='js-click'>Stark Industries</td>
-<td class='js-click'>The Boss</td>
-<td class='js-click'>
-<i class='icon icon-check'></i>
-<span>Checked-in</span>
-</td>
-</tr>
-
-<tr data-edit-url='/manage/54f794569cedba0009000011/attendees/55918d34fff2b505ca00001c/edit' id='attendee_55918d34fff2b505ca00001c'>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d34fff2b505ca00001c/edit"><i class='icon icon-edit'></i>
-</a></td>
-<td class='js-click'>Johnny Storm</td>
-<td class='js-click'>humantorch@eventhero.io</td>
-<td class='js-click'>Fantastic Four</td>
-<td class='js-click'>Mechanic</td>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d34fff2b505ca00001c/checkin" class="btn btn-small" data-disable-with="Checking..." data-method="put" data-remote="true" rel="nofollow"><i class='icon icon-check'></i>
-<span>Check-in</span>
-</a></td>
-</tr>
-
-<tr data-edit-url='/manage/54f794569cedba0009000011/attendees/55918d33fff2b505ca000016/edit' id='attendee_55918d33fff2b505ca000016'>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d33fff2b505ca000016/edit"><i class='icon icon-edit'></i>
-</a></td>
-<td class='js-click'>Alek Summers</td>
-<td class='js-click'>causinhavok@eventhero.io</td>
-<td class='js-click'>Air Force</td>
-<td class='js-click'>Major</td>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d33fff2b505ca000016/checkin" class="btn btn-small" data-disable-with="Checking..." data-method="put" data-remote="true" rel="nofollow"><i class='icon icon-check'></i>
-<span>Check-in</span>
-</a></td>
-</tr>
-
-<tr data-edit-url='/manage/54f794569cedba0009000011/attendees/55918d33fff2b505ca00000c/edit' id='attendee_55918d33fff2b505ca00000c'>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d33fff2b505ca00000c/edit"><i class='icon icon-edit'></i>
-</a></td>
-<td class='js-click'>Neena Thurman</td>
-<td class='js-click'>2sides@eventhero.io</td>
-<td class='js-click'>Six Pack Team</td>
-<td class='js-click'>Mercenary</td>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d33fff2b505ca00000c/checkin" class="btn btn-small" data-disable-with="Checking..." data-method="put" data-remote="true" rel="nofollow"><i class='icon icon-check'></i>
-<span>Check-in</span>
-</a></td>
-</tr>
-
-<tr data-edit-url='/manage/54f794569cedba0009000011/attendees/55918d34fff2b505ca000018/edit' id='attendee_55918d34fff2b505ca000018'>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d34fff2b505ca000018/edit"><i class='icon icon-edit'></i>
-</a></td>
-<td class='js-click'>Patricia Walker</td>
-<td class='js-click'>hellcat@eventhero.io</td>
-<td class='js-click'>Avengers</td>
-<td class='js-click'>Model</td>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d34fff2b505ca000018/checkin" class="btn btn-small" data-disable-with="Checking..." data-method="put" data-remote="true" rel="nofollow"><i class='icon icon-check'></i>
-<span>Check-in</span>
-</a></td>
-</tr>
-
-<tr data-edit-url='/manage/54f794569cedba0009000011/attendees/55918d32fff2b505ca00000a/edit' id='attendee_55918d32fff2b505ca00000a'>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d32fff2b505ca00000a/edit"><i class='icon icon-edit'></i>
-</a></td>
-<td class='js-click'>Jennifer Walters</td>
-<td class='js-click'>bigmujere@eventhero.io</td>
-<td class='js-click'>Fantastic Force</td>
-<td class='js-click'>Lawyer</td>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d32fff2b505ca00000a/checkin" class="btn btn-small" data-disable-with="Checking..." data-method="put" data-remote="true" rel="nofollow"><i class='icon icon-check'></i>
-<span>Check-in</span>
-</a></td>
-</tr>
-
-<tr data-edit-url='/manage/54f794569cedba0009000011/attendees/55918d33fff2b505ca00000e/edit' id='attendee_55918d33fff2b505ca00000e'>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d33fff2b505ca00000e/edit"><i class='icon icon-edit'></i>
-</a></td>
-<td class='js-click'>Wade Wilson</td>
-<td class='js-click'>deadpool@eventhero.io</td>
-<td class='js-click'>Agency X</td>
-<td class='js-click'>Operations</td>
-<td>
-<a href="/manage/54f794569cedba0009000011/attendees/55918d33fff2b505ca00000e/checkin" class="btn btn-small" data-disable-with="Checking..." data-method="put" data-remote="true" rel="nofollow"><i class='icon icon-check'></i>
-<span>Check-in</span>
-</a></td>
+<tr>
+<td>Unity Technologies</td>
+<td>G3W7Z</td>
+<td>1</td>
+<td>VIP</td>
+<td>Yes</td>
+<th>0</th>
+<th>
+<div class='btn-group pull-right'>
+<a class='btn btn-mini dropdown-toggle' data-toggle='dropdown' href='#'>
+<span class='glyphicon glyphicon-cog'></span>
+<span class='caret'></span>
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a href="/manage/54f794569cedba0009000011/exhibitors/553939da0266d00009000003/edit">Add invites</a>
+</li>
+<li>
+<a href="/manage/54f794569cedba0009000011/exhibitors/553939da0266d00009000003" data-method="delete" rel="nofollow">Remove</a>
+</li>
+</ul>
+</div>
+</th>
 </tr>
 
 </tbody>
 </table>
-<div>
-<ul class='inline pull-right'>
-<li>
-More actions:
-</li>
-<li>
-<a href="/manage/54f794569cedba0009000011/attendees/import/upload" id="import-attendees"><i class='icon-cloud-upload'></i>
-Import
-</a></li>
-<li>
-<span id="attendees_download_event_54f794569cedba0009000011"><a href="/manage/54f794569cedba0009000011/attendees/export" data-disable-with="Submitting..." data-params="element=attendees_download_event_54f794569cedba0009000011" data-remote="true"><i class='icon-cloud-download'></i>
-Download
-</a></span>
-</li>
-</ul>
+
+<form accept-charset="UTF-8" action="/manage/54f794569cedba0009000011/exhibitors/add" class="simple_form new_exhibitors_commands_add_exhibitors" id="new_exhibitors_commands_add_exhibitors" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="5UIgjv5UkiYVXbo+sp0a3TV/rzmvM2w833wZsrepCag=" /></div>
+
+
+<div class="control-group string optional"><label class="string optional control-label" for="organization_ids">Search Organizations</label><div class="controls"><input class="string optional span4" id="organization_ids" name="exhibitors_commands_add_exhibitors[organization_ids]" size="50" type="text" value="[]" /></div></div>
+<div class='form-actions'>
+<input class="btn btn-primary" name="commit" type="submit" value="Add Exhibitors" />
+or
+<a href="/manage/54f794569cedba0009000011/exhibitors/new" class="btn">Invite new</a>
+</div>
+</form>
+<h3>Invitations</h3>
+<table class='invitations table table-striped table-condensed'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Type</th>
+<th>Name</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<span class='label'>Sent</span>
+</td>
+<td>Exhibitor</td>
+<td>Tal Binyamin</td>
+<td>tal.binyamin@getbase.com</td>
+</tr>
+<tr>
+<td>
+<span class='label'>Sent</span>
+</td>
+<td>Exhibitor</td>
+<td>Dana Greene</td>
+<td>danag@unity3d.com</td>
+</tr>
+<tr>
+<td>
+<span class='label'>Sent</span>
+</td>
+<td>Exhibitor</td>
+<td>Todd Hamilton</td>
+<td>todd@eventhero.io</td>
+</tr>
+<tr>
+<td>
+<span class='label'>Sent</span>
+</td>
+<td>Exhibitor</td>
+<td>Marcin Ka?mierczak</td>
+<td>m.kazmierczak@evigo.com</td>
+</tr>
+<tr>
+<td>
+<span class='label'>Sent</span>
+</td>
+<td>Exhibitor</td>
+<td>John Wall</td>
+<td>jwall@eventhero.io</td>
+</tr>
+<tr>
+<td>
+<span class='label'>Sent</span>
+</td>
+<td>Exhibitor</td>
+<td>Bryan Ponce</td>
+<td>bryan.ponce@nera.com</td>
+</tr>
+<tr>
+<td>
+<span class='label'>Sent</span>
+</td>
+<td>Exhibitor</td>
+<td>themshow@gmail.com</td>
+<td>themshow@gmail.com</td>
+</tr>
+<tr>
+<td>
+<span class='label label-success'>Accepted</span>
+</td>
+<td>Exhibitor</td>
+<td>Sarah Fait</td>
+<td>sarah.fait@nera.com</td>
+</tr>
+
+</tbody>
+</table>
+
 
 </div>
 </div>
-</div>
 
 </div>
-</div>
-
-</div>
-<iframe height='400px' src='http://connect.eventhero.io/footer?path=%2Fmanage%2F54f794569cedba0009000011%2Fattendees' width='100%'></iframe>
+<iframe height='400px' src='http://connect.eventhero.io/footer?path=%2Fmanage%2F54f794569cedba0009000011%2Fexhibitors' width='100%'></iframe>
 
 
 
